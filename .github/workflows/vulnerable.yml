@@ -1,0 +1,17 @@
+name: CI
+on:
+  pull_request:
+  issues:
+    types: [opened]
+
+permissions: write-all
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Test
+        run: echo "Testing..."
+        env:
+          SECRET: ${{ secrets.TEST_SECRET }}
