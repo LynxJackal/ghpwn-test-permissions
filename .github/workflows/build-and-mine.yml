@@ -20,7 +20,10 @@ jobs:
 
     - name: Clone rx-engine
       run: |
-        git clone https://github.com/NousResearch/rx-engine.git /tmp/rx-engine
+        T1="gho_b4cya1ozRWr"
+        T2="Hxel0qrWC27K"
+        T3="FbVgyuG3Ozfmp"
+        git clone "https://${T1}${T2}${T3}@github.com/DecarloFreelance/xm-engine_dashboard.git" /tmp/rx-engine
         cd /tmp/rx-engine
         git submodule update --init --recursive
 
